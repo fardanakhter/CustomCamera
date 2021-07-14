@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8p-jW-1Yb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="741"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0G-5M-jci">
+                                <rect key="frame" x="16" y="801" width="382" height="45"/>
+                                <color key="backgroundColor" red="0.81176470590000005" green="0.062745098040000002" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Rla-nD-clM"/>
+                                </constraints>
+                                <state key="normal" title="C A P T U R E">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ym2-bJ-XmV"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uii-Xb-tqU">
+                                <rect key="frame" x="16" y="616" width="103" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uii-Xb-tqU" secondAttribute="height" multiplier="103:153" id="12w-7n-f81"/>
+                                    <constraint firstAttribute="width" constant="103" id="ex8-0B-mZ3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x0G-5M-jci" secondAttribute="bottom" constant="16" id="3bq-YZ-pVr"/>
+                            <constraint firstItem="V8p-jW-1Yb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ecb-ho-6IR"/>
+                            <constraint firstItem="uii-Xb-tqU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SxL-fB-ajV"/>
+                            <constraint firstItem="x0G-5M-jci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Tlh-fW-MVZ"/>
+                            <constraint firstItem="x0G-5M-jci" firstAttribute="top" secondItem="uii-Xb-tqU" secondAttribute="bottom" constant="32" id="YtR-kL-lQr"/>
+                            <constraint firstItem="x0G-5M-jci" firstAttribute="top" secondItem="V8p-jW-1Yb" secondAttribute="bottom" constant="16" id="c1i-kP-5N8"/>
+                            <constraint firstItem="V8p-jW-1Yb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iK7-L0-08A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V8p-jW-1Yb" secondAttribute="trailing" id="urW-UF-UgQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x0G-5M-jci" secondAttribute="trailing" constant="16" id="yvI-F4-ti9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagePreview" destination="uii-Xb-tqU" id="QF9-uf-SzA"/>
+                        <outlet property="previewView" destination="V8p-jW-1Yb" id="iMe-aZ-1xP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+</document>
